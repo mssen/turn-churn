@@ -7,3 +7,11 @@
 .add-container {
   justify-content: row;
 }
+
+.submit-container {
+  justify-content: row;
+}
+
+.hidden {
+  display: none;
+}

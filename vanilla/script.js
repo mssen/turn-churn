@@ -1,7 +1,8 @@
 function run() {
-  var addButton = document.querySelector('#add-button'),
-      victimInput = document.querySelector('#victim-input'),
-      victimList = document.querySelector('#victim-list');
+  var addButton = document.getElementById('add-button'),
+      victimInput = document.getElementById('victim-input'),
+      victimList = document.getElementById('victim-list'),
+      submitContainer = document.getElementById('submit-container');
 
   addButton.addEventListener('click', function () {
     if (victimInput.value) {
@@ -9,6 +10,8 @@ function run() {
       newVictim.appendChild(document.createTextNode(victimInput.value));
       victimList.appendChild(newVictim);
       victimInput.value = '';
+
+      if (submitContainer.classList.contains('hidden')) submitContainer.classList.remove('hidden');
     }
   });
 }
