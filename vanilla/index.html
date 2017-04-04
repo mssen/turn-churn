@@ -9,22 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body class="main-container">
-    <h1 class="title">
-      Turn Churn
-    </h1>
+  <body>
+    <section class="main-container">
+      <h1 class="title">
+        Turn Churn
+      </h1>
 
-    <div class="add-container">
-      <input class="text" id="victim-input" placeholder="The next victim..." />
-      <button id="add-button">Add</button>
-    </div>
+      <div class="add-container">
+        <input class="text" id="victim-input" placeholder="The next victim..." autofocus/>
+        <button id="add-button">Add</button>
+      </div>
 
-    <ul id="victim-list">
-    </ul>
-    <div id="submit-container" class="submit-container hidden">
-      <button id="submit">Churn it!</button>
-      <button id="reset">Nah</button>
-    </div>
+      <ul id="victim-list">
+      </ul>
+      <footer id="submit-container" class="submit-container hidden">
+        <button id="reset">Clear it!</button>
+        <button id="submit">Churn it!</button>
+      </footer>
+    </section>
 
     <script src="script.js"></script>
   </body>
