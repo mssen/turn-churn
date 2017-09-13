@@ -1,8 +1,8 @@
 function run() {
-  var addButton = document.getElementById('add-button'),
-      victimInput = document.getElementById('victim-input'),
-      victimList = document.getElementById('victim-list'),
-      submitContainer = document.getElementById('submit-container');
+  var addButton = document.querySelector('.add-button'),
+      victimInput = document.querySelector('.victim-input'),
+      victimList = document.querySelector('.victim-list'),
+      submitContainer = document.querySelector('.submit-container');
 
   addButton.addEventListener('click', function () {
     if (victimInput.value) {
