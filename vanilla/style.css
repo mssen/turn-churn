@@ -74,14 +74,14 @@ body {
   background: #A51616;
 }
 
-.reset-button, .submit-button {
+.clear-button, .submit-button {
   cursor: pointer;
   border: 2px solid #EF8354;
   border-radius: 2px;
   padding: 10px 15px;
 }
 
-.reset-button {
+.clear-button {
   color: #EF8354;
   background: white;
 }

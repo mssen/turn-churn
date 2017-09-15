@@ -8,6 +8,7 @@
     this.victimInput = document.querySelector('.victim-input');
     this.victimList = document.querySelector('.victim-list');
     this.submitContainer = document.querySelector('.submit-container');
+    this.clearButton = document.querySelector('.clear-button');
   }
 
   View.prototype.add = function (name) {
@@ -32,6 +33,13 @@
     alert('it works');
   }
 
+  View.prototype.clear = function () {
+    while (this.victimList.firstChild) {
+      this.victimList.removeChild(this.victimList.firstChild);
+    }
+    this.submitContainer.classList.add('hidden');
+  }
+
   View.prototype.bind = function (event, handler) {
     var self = this;
 
@@ -52,6 +60,10 @@
           handler();
         }
       }, false);
+    } else if (event === 'clear') {
+      self.clearButton.addEventListener('click', function () {
+        handler();
+      });
     }
   }
 
