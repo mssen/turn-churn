@@ -46,11 +46,32 @@ body {
 }
 
 .victim-list {
-  margin: 40px 0;
+  margin: 30px 0;
+  padding: 0;
+  list-style: none;
 }
 
-.submit-container {
-  justify-content: row;
+.victim, .submit-container {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.victim {
+  margin: 10px 0;
+}
+
+.victim-delete {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.victim-delete:hover {
+  border-radius: 2px;
+  color: white;
+  background: #A51616;
 }
 
 .reset-button, .submit-button {

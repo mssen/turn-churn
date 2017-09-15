@@ -9,6 +9,10 @@
     self.view.bind('add', function (name) {
       self.add(name);
     });
+
+    self.view.bind('remove', function () {
+      self.remove();
+    });
   }
 
   Controller.prototype.add = function (name) {
@@ -17,6 +21,10 @@
     if (trimmedName) {
       this.view.add(name);
     }
+  }
+
+  Controller.prototype.remove = function () {
+    this.view.remove();
   }
 
   window.app = window.app || {};
