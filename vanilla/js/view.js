@@ -11,13 +11,14 @@
     this.clearButton = document.querySelector('.clear-button');
   }
 
-  View.prototype.add = function (name) {
+  View.prototype.add = function (id, name) {
     var close = document.createElement('button');
     close.classList.add('victim-delete');
     close.appendChild(document.createTextNode('✕'));
 
     var newVictim = document.createElement('li');
     newVictim.classList.add('victim');
+    newVictim.setAttribute('data-id', id);
     newVictim.appendChild(document.createTextNode(name));
     newVictim.appendChild(close);
 
@@ -57,7 +58,7 @@
     } else if (event === 'remove') {
       self.victimList.addEventListener('click', function (event) {
         if (event.target.classList.contains('victim-delete')) {
-          handler();
+          handler(event.target.parentNode.dataset.id);
         }
       }, false);
     } else if (event === 'clear') {
