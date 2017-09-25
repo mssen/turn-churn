@@ -13,7 +13,6 @@
 
   Model.prototype.remove = function (id) {
     delete this.victims[id];
-    console.log("Deleted!", this.victims)
   }
 
   Model.prototype.removeAll = function () {

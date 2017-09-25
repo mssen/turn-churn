@@ -30,8 +30,9 @@
     }
   }
 
-  View.prototype.remove = function () {
-    alert('it works');
+  View.prototype.remove = function (id) {
+    var victim = document.querySelector('[data-id="' + id + '"]');
+    victim.parentNode.removeChild(victim);
   }
 
   View.prototype.clear = function () {
