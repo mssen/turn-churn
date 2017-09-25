@@ -33,6 +33,10 @@
   View.prototype.remove = function (id) {
     var victim = document.querySelector('[data-id="' + id + '"]');
     victim.parentNode.removeChild(victim);
+
+    if (this.victimList.children.length === 0) {
+      this.submitContainer.classList.add('hidden');
+    }
   }
 
   View.prototype.clear = function () {
