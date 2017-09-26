@@ -9,6 +9,7 @@
     this.victimList = document.querySelector('.victim-list');
     this.submitContainer = document.querySelector('.submit-container');
     this.clearButton = document.querySelector('.clear-button');
+    this.submitButton = document.querySelector('.submit-button');
   }
 
   View.prototype.add = function (id, name) {
@@ -46,6 +47,10 @@
     this.submitContainer.classList.add('hidden');
   }
 
+  View.prototype.displayChoice = function (victim) {
+    alert("It's " + victim + "'s turn!");
+  }
+
   View.prototype.bind = function (event, handler) {
     var self = this;
 
@@ -68,6 +73,10 @@
       }, false);
     } else if (event === 'clear') {
       self.clearButton.addEventListener('click', function () {
+        handler();
+      });
+    } else if (event === 'churn') {
+      self.submitButton.addEventListener('click', function () {
         handler();
       });
     }

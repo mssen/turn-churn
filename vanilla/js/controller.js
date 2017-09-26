@@ -18,6 +18,10 @@
     self.view.bind('clear', function () {
       self.clear();
     });
+
+    self.view.bind('churn', function () {
+      self.churn();
+    });
   }
 
   Controller.prototype.add = function (name) {
@@ -37,6 +41,12 @@
   Controller.prototype.clear = function () {
     this.model.removeAll();
     this.view.clear();
+  }
+
+  Controller.prototype.churn = function () {
+    var randomVictim = this.model.getRandom();
+    this.view.displayChoice(randomVictim);
+    this.clear();
   }
 
   window.app = window.app || {};
