@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+
+import VictimList from './components/VictimList';
 
 export default class App extends React.Component {
   render() {
     return (
-      <p>Testing update</p>
+      <div>
+        <VictimList victims={ [{ name: 'One'} , { name: 'Two'} ] }></VictimList>
+      </div>
     )
   }
 }
