@@ -1,6 +1,9 @@
 import React from 'react'
 
-const App = () =>
-  <p>Testing more stuff</p>
-
-export default App;
+export default class App extends React.Component {
+  render() {
+    return (
+      <p>Testing update</p>
+    )
+  }
+}
