@@ -31,9 +31,9 @@ export default class App extends React.Component {
           Turn<em>Churn</em>
         </h1>
 
-        <AddVictim addVictim={ this.addVictim }></AddVictim>
+        <AddVictim addVictim={ this.addVictim } />
         
-        <VictimList victims={ this.state.victims }></VictimList>
+        <VictimList victims={ this.state.victims } />
       </div>
     )
   }
