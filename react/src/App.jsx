@@ -1,5 +1,7 @@
 import React from 'react';
 
+import style from './App.css';
+
 import AddVictim from './components/AddVictim';
 import VictimList from './components/VictimList';
 
@@ -54,9 +56,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>
-          Turn<em>Churn</em>
+      <div className="main-container">
+        <h1 className="title">
+          Turn<em className="fancy">Churn</em>
         </h1>
 
         <AddVictim addVictim={ this.addVictim } />
@@ -64,9 +66,9 @@ export default class App extends React.Component {
 
         {
           this.state.victims.length > 0
-            && <div>
-                  <button onClick={ this.handleClear }>Clear it!</button>
-                  <button onClick={ this.handleSubmit }>Churn it!</button>
+            && <div className="submit-container">
+                  <button className="clear-button" onClick={ this.handleClear }>Clear it!</button>
+                  <button className="submit-button" onClick={ this.handleSubmit }>Churn it!</button>
                </div>
         }
       </div>

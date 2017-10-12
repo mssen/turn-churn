@@ -1,13 +1,15 @@
 import React from 'react';
 
+import style from './VictimList.css';
+
 const VictimList = ({ victims, deleteVictim }) => {
   return (
-    <ul>
+    <ul className="victim-list">
       {
         victims.map(victim =>
-          <li key={ victim.id }>
+          <li className="victim" key={ victim.id }>
             { victim.name }
-            <button onClick={() => deleteVictim(victim.id) }>✕</button>
+            <button className="victim-delete" onClick={() => deleteVictim(victim.id) }>✕</button>
           </li>
         )
       }

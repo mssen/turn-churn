@@ -1,5 +1,7 @@
 import React from 'react';
 
+import style from './AddVictim.css';
+
 export default class AddVictim extends React.Component {
   constructor(props) {
     super(props);
@@ -28,15 +30,16 @@ export default class AddVictim extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="add-container">
         <input
+          className="victim-input"
           type="text"
           placeholder="The next victim..."
           value={ this.state.victim }
           onChange={ this.handleUpdateVictim }
           onKeyUp={ this.handleAddVictim }
           autoFocus />
-        <button onClick={ this.handleAddVictim } >+ Add</button>
+        <button className="add-button" onClick={ this.handleAddVictim } >+ Add</button>
       </div>
     )
   }
