@@ -13,6 +13,7 @@ export default class App extends React.Component {
     this.nextId = 1;
 
     this.addVictim = this.addVictim.bind(this);
+    this.deleteVictim = this.deleteVictim.bind(this);
     this.handleClear = this.handleClear.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -23,6 +24,17 @@ export default class App extends React.Component {
         id: this.nextId++,
         name: newVictimName
       })
+    }));
+  }
+
+  deleteVictim(victimId) {
+    const deleteIndex = this.state.victims.findIndex(
+      (victim) => victim.id === victimId
+    );
+    this.setState((prevState) => ({
+      victims: prevState.victims
+                .slice(0, deleteIndex)
+                .concat(prevState.victims.slice(deleteIndex + 1))
     }));
   }
 
@@ -48,7 +60,7 @@ export default class App extends React.Component {
         </h1>
 
         <AddVictim addVictim={ this.addVictim } />
-        <VictimList victims={ this.state.victims } />
+        <VictimList victims={ this.state.victims } deleteVictim={ this.deleteVictim } />
 
         {
           this.state.victims.length > 0
