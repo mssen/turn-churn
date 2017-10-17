@@ -1,15 +1,23 @@
 <template>
   <div>
     <h1>Greetings!</h1>
-    <p>{{ information }}</p>
+    <victim-list v-bind:victims="victims"></victim-list>
   </div>  
 </template>
 
 <script charset="utf-8">
+import VictimList from './components/VictimList';
+
 export default {
+  components: {
+    VictimList
+  },
   data() {
     return {
-      information: 'Some'
+      victims: [
+        { id: 1, name: 'One'},
+        { id: 2, name: 'Two'}
+      ]
     }
   }
 }
