@@ -4,7 +4,7 @@
   "description": "Turn choosing app.",
   "main": "index.js",
   "repository": "https://github.com/mssen/turn-churn",
-  "author": "Missy Danielsen",
+  "author": "Missy Danielsen <missy.danielsen@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
