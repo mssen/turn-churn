@@ -9,6 +9,10 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  resolve: {
+    extensions: ['.js', '.vue']
+  },
+
   module: {
     rules: [
       {
