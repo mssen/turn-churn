@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="victim in victims">{{ victim.name }}</li>
+    <li v-for="victim in victims" :key="victim.id">{{ victim.name }}</li>
   </ul>  
 </template>
 

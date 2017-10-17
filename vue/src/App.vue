@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Greetings!</h1>
-    <victim-list v-bind:victims="victims"></victim-list>
+    <victim-list :victims="victims"></victim-list>
   </div>  
 </template>
 
