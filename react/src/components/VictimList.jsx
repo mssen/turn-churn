@@ -9,7 +9,7 @@ const VictimList = ({ victims, deleteVictim }) => {
         victims.map(victim =>
           <li className="victim" key={ victim.id }>
             { victim.name }
-            <button className="victim-delete" onClick={() => deleteVictim(victim.id) }>✕</button>
+            <button className="victim-delete" onClick={ () => deleteVictim(victim.id) }>✕</button>
           </li>
         )
       }
