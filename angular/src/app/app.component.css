@@ -1,0 +1,39 @@
+.title {
+  font-size: 50px;
+}
+
+.fancy {
+  color: #EF8354;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  height: 100vh;
+  background: white;
+}
+
+.submit-container {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clear-button, .submit-button {
+  cursor: pointer;
+  border: 2px solid #EF8354;
+  border-radius: 2px;
+  padding: 10px 15px;
+}
+
+.clear-button {
+  color: #EF8354;
+  background: white;
+}
+
+.submit-button {
+  color: white;
+  background: #EF8354;
+}
