@@ -5,11 +5,11 @@
     </h1>
 
     <add-victim v-on:add-victim="addVictim"></add-victim>
-    <victim-list :victims="victims" v-on:delete-victim="deleteVictim"></victim-list>
+    <victim-list :victims="victims" @delete-victim="deleteVictim"></victim-list>
 
     <div v-show="victims.length > 0" class="submit-container">
-      <button class="clear-button" v-on:click="clear">Clear it!</button>
-      <button class="submit-button" v-on:click="submit">Churn it!</button>
+      <button class="clear-button" @click="clear">Clear it!</button>
+      <button class="submit-button" @click="submit">Churn it!</button>
     </div>
   </div>  
 </template>
