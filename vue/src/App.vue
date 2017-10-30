@@ -4,7 +4,7 @@
       Turn<em class="fancy">Churn</em>
     </h1>
 
-    <add-victim v-on:add-victim="addVictim"></add-victim>
+    <add-victim @add-victim="addVictim"></add-victim>
     <victim-list :victims="victims" @delete-victim="deleteVictim"></victim-list>
 
     <div v-show="victims.length > 0" class="submit-container">
