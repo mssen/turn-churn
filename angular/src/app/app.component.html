@@ -3,7 +3,7 @@
     Turn<em class="fancy">Churn</em>
   </h1>
 
-  <app-add-victim></app-add-victim>
+  <app-add-victim (onAddVictim)="addNewVictim($event)"></app-add-victim>
   <app-victim-list [victims]="victims"></app-victim-list>
 
   <div class="submit-container">

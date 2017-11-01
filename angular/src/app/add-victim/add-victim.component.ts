@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-add-victim',
@@ -8,17 +8,20 @@ import { Component, OnInit } from '@angular/core';
         class="victim-input"
         type="text"
         placeholder="The next victim..."
-        autoFocus />
-      <button class="add-button">+ Add</button>
+        autoFocus
+        (keyup.enter)="addVictim(newVictim)"
+        #newVictim />
+      <button class="add-button" (click)="addVictim(newVictim)">+ Add</button>
     </div>
   `,
   styleUrls: ['./add-victim.component.css']
 })
-export class AddVictimComponent implements OnInit {
+export class AddVictimComponent {
+  @Output() onAddVictim: EventEmitter<string> = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  addVictim(newVictim: HTMLInputElement) {
+    this.onAddVictim.emit(newVictim.value);
+    newVictim.value = '';
   }
 
 }

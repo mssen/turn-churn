@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   victims: string[] = ['Test', 'One', 'Two'];
   nextId: number = 1;
+
+  addNewVictim(victimName: string) {
+    this.victims.push(victimName);
+  }
 }
