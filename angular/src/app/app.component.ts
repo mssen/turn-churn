@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  victims: string[] = ['Test', 'One', 'Two'];
+  victims: string[] = [];
   nextId: number = 1;
 
   addNewVictim(victimName: string) {
